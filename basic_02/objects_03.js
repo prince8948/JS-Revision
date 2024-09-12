@@ -23,23 +23,23 @@ const myUser = {
 //how to access these object values
 
 //  1. way.
- //console.log(myUser.city)
+ console.log(myUser.city)
 
  // 2 way or best to access obj properties
- //console.log(myUser["name"])
+ console.log(myUser["name"])
 
  // 3 way to access symbols 
- //console.log(myUser[mySymbols])
+ console.log(myUser[mySymbols])
 
 
  // how to change email
  myUser.email = "prince123@gmail.com"
-//  console.log(myUser["email"])
+ console.log(myUser["email"])
 
  // if don'nt want ot changes in objects properties so we used the freeze(object)methods
-// Object.freeze(myUser);
+Object.freeze(myUser);
 myUser.email = "prince1234@gmail.com"
-// console.log(myUser)
+console.log(myUser)
 
 
 
@@ -55,9 +55,9 @@ myUser.email = "prince1234@gmail.com"
     console.log(`welcome to JS, ${this.name}`)
     // this is refence to the current object 
  }
-//  console.log(myUser.greeting());
+ console.log(myUser.greeting());
  console.log(myUser.morninggreet())
 
-// console.log(myUser);
+console.log(myUser);
 
  
