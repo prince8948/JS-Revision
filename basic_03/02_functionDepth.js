@@ -42,6 +42,6 @@ function handleArray(myArr){
     return myArr[3];
 }
 console.log(handleArray(myArray));
-// or do like this 
+// OR do like this 
 console.log(handleArray([20,30,40,50,60,70,80,90]))
 
