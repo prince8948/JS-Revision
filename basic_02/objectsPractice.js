@@ -1,5 +1,3 @@
-
-/*
 const mySymbols = Symbol("description");
 
 // Array of users
@@ -61,13 +59,40 @@ const myUser = [
         isLoggedIn: false
     }
 ];
-console.log("Logged in users:");
+// console.log("Logged in users:");
 for (let i = 0; i < myUser.length; i++) {
     if (myUser[i].skills.length>2) {
-        console.log(`${myUser[i].name}  have more than 2 skills.`);
+        // console.log(`${myUser[i].name}  have more than 2 skills.`);
     }
 }
 
-*/
 
+
+
+// WAP to count character from given string 
+
+const str = "mahakal"
+
+const obj ={}
+
+for(var x of str){
+    if(obj[x]){
+        obj[x] +=1;
+    }
+    else{
+        obj[x] = 1
+    }
+}
+// console.log(obj);
+
+
+
+// Function to handle the processing and printing
+let input = "hello"
+const lines = input.split();
+console.log(lines);
+
+//in given str count the vowel 
+
+const str3 = "Hello prince prajapati"
 

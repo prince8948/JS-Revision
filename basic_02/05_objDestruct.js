@@ -5,8 +5,7 @@ const rectangle = {
     width:30,
     color:"red",
     radius:4
-}
-
+};
 //we used destructuring for easy to access object properties
 const {height, width,color, radius } = rectangle;
 console.log(color);
