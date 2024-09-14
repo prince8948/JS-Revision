@@ -14,7 +14,7 @@ console.log(restArguments(20,50,10,40,60,70,90))
 function restArguments(val1, val2, ...nums){
     return nums //it did not returns those value which are assign to val1 and val2
 }
-console.log(restArguments(20,50,10,40,60,70,90))
+console.log(restArguments(20,50,10,40,50,80,90))
 
 
 //How to passed object in functions 
