@@ -5,7 +5,7 @@ const user = {
     email: "pp@gmail.com",
     isLoggedIN: true,
     greetingMessage: function () {
-        // console.log(`${this.userName} welcome to welsite`); //here we used this keyword it refer to the current object properties "it does not work in function"
+        console.log(`${this.userName} welcome to welsite`); //here we used this keyword it refer to the current object properties "it does not work in function"
         // here is the current user name is Prince it return prince
         // console.log(this); // it return the object 
     }
@@ -15,7 +15,7 @@ user.greetingMessage();
 user.userName = "Rahul";
 user.greetingMessage() //this will return the Rahul because current context is change 
 //if you want to check current context or object 
-// console.log(this); //it returns empty object because it does not have any current context
+console.log(this); //it returns empty object because it does not have any current context
 
 
 /**
