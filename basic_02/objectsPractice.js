@@ -62,7 +62,7 @@ const myUser = [
 // console.log("Logged in users:");
 for (let i = 0; i < myUser.length; i++) {
     if (myUser[i].skills.length>2) {
-        // console.log(`${myUser[i].name}  have more than 2 skills.`);
+        console.log(`${myUser[i].name}  have more than 2 skills.`);
     }
 }
 
