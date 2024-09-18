@@ -81,7 +81,7 @@ const bookStore = [
         author:"acb",
     },
     {
-        title:"book 10",
+        title:"book 8",
         genre:"history",
         publish:1965,
         editon:2023,
@@ -105,3 +105,8 @@ const findLand = cityName.filter((city)=>{
 })
 console.log(findLand)
 console.log(findLand.length)
+
+const arrayDetails = bookStore.filter((arrayList)=>{
+    return arrayList;
+})
+console.log("just all parameter ---->    ",arrayDetails);

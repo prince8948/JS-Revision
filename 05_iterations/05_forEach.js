@@ -92,7 +92,7 @@ std.forEach((stdDetails)=>{
         // if(stdDetails.skills.length>2){
         //     console.log(`${stdDetails.name} : ${stdDetails.course}`)
         // }
-        console.log(arr);   
+        // console.log(arr);   
     }
 })
 console.log(arr.length);
