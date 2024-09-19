@@ -30,7 +30,7 @@ while(x<6){
         x++ // Increment before continue to avoid infinite loop
         continue;
     }
-    // console.log(x);
+    console.log(x);
     x++;
 }
 
@@ -45,9 +45,10 @@ do {
     l++
 } while (l<=10);
 
-// this code returns the 22 because it return the then do increament and check condition. Condition is false so it exits the loops
-console.log("for dowgile loops outputs - >");
 
+
+// this code returns the 22 because it return the then do increament and check condition. Condition is false so it exits the loops
+// console.log("for dowgile loops outputs - >");
 let n = 1;
 do {
     if(n == 4){
@@ -56,6 +57,21 @@ do {
     console.log("table of 2's", 2*n)
     n++
 } while (n<=10);
+
+
+
+let m = 1;
+while(m<=6){
+    if(m==3){
+        console.log(m);
+        continue
+    }
+    console.log(m);
+    m++;
+}
+
+
+
 
 
 
