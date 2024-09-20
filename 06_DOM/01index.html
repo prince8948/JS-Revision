@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  learning</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+        <div class="day">friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+    //console.log(parent.children);  //it return the how many child in side parent class
+    //console.log(parent.children[2]); // it return 3rd child of parent class
+    
+    //let how to access childs by loops
+    for (let i = 0; i < parent.children.length; i++) { 
+        //parent.children.length count how many elements in parent class
+        const element = parent.children[i].innerHTML;
+        // it give the text which are in days class
+        // console.log(element);
+    }
+    parent.children[3].style.color ='red'  // we cam modify its properties like color etc
+    parent.children[2].style.fontWeight = 'bold';
+    parent.children[1].style.color ='green'
+    parent.children[0].style.color ='blue' 
+    parent.children[4].style.color ='orange'  
+
+    // how to get first elements of parent class 
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+   
+    // how to get parent from child
+    const child = document.querySelector('.day');
+    console.log(child.parentElement);
+
+    //let find next node of child
+    console.log(child.nextElementSibling);
+    console.log(child.nextSibling);
+    console.log(parent.childNodes);//it retruns node list of parent child 
+    
+    
+    
+    
+    
+</script>
+</html>

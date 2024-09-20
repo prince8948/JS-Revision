@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create or add new elements</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>add new list item using functions</h1>
+
+    <div class="container">
+        <ul class="lang">
+            <li>Language Name</li>
+        </ul>
+        <ol class="employeeName">
+            <li>employee Name</li>
+        </ol>
+    </div>
+</body>
+<script>
+    function addlist(list) {
+        const li = document.createElement('li')
+        li.innerHTML = `${list}`;
+        const getlist = document.querySelector('.lang')
+        getlist.appendChild(li)
+    } addlist('python')
+    addlist('java')
+    function addEmpName(empName){
+        const newli = document.createElement('li')
+        const getOlList = document.querySelector('.employeeName')
+        newli.innerText = `${empName}`;
+        getOlList.appendChild(newli); 
+    }addEmpName('Prince Prajapati')
+
+</script>
+
+</html>
