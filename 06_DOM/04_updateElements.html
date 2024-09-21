@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update elements</title>
+</head>
+<body>
+    <h1>update elements names</h1>
+    <h3>Employe Name</h3>
+    <ol class="names">
+        <li>prince</li>
+        <li>raj</li>
+        <li>rahul</li>
+        <li>kashi</li>
+        <li>kamal</li>
+    </ol>
+    <h3>Language Name</h3>
+    <ul class="langName">
+        <li>java</li>
+        <li>javascripts</li>
+        <li>python</li>
+        <li>cpp</li>
+    </ul>
+</body>
+<script>
+    // this cade alway change the first list 
+    const secondli =document.querySelector('li:nth-child(2)')
+    secondli.textContent = 'Rajkamal';
+
+    //how to change the other list javascript to  swift
+    const langList = document.querySelector('.langName')
+    langList.children[1].textContent = 'Switf'
+    
+
+    //let update the with optimized 
+    const getList = document.querySelector('li:nth-child(5)')
+    const update = document.createElement('li')
+    update.textContent = "Mahehs Babu"
+    getList.replaceWith(update)
+
+    // OR we can do like this 
+    const getLi = langList.children[2]
+    const updateLang = document.createElement('li');
+    updateLang.textContent='golang'
+    getLi.replaceWith(updateLang)
+
+
+    //other approach lets change the first elemente
+    const firstElemnts = document.querySelector('li:first-child')
+    firstElemnts.outerHTML = '<li>Rohit sharma </li>'
+
+    //last elements changes 
+    const lastElemnts = document.querySelector('li:last-child')
+    lastElemnts.outerHTML = '<li>Virat sharma </li>'
+      
+
+    // const newlist = document.createElement('li')
+</script>
+</html>

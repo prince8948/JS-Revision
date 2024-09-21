@@ -44,6 +44,22 @@
         getOlList.appendChild(newli); 
     }addEmpName('Prince Prajapati')
     addEmpName('Raj kumar')
+    
+
+    //optimized way to add elements 
+    function optiWayToAdd(lang){
+        const newli = document.createElement('li')
+        newli.appendChild(document.createTextNode(lang))
+        document.querySelector('.lang').appendChild(newli)
+    }optiWayToAdd("typescripts")
+    
+    
+    // this is for employee name
+    function optimizedAddEmp(emp){
+        const newEmp = document.createElement('li');
+        newEmp.appendChild(document.createTextNode(emp));
+        document.querySelector('.employeeName').appendChild(newEmp);
+    }optimizedAddEmp('Rahul')
 
 </script>
 
