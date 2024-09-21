@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Elements</title>
+</head>
+<body>
+    <h1>Remove elements names</h1>
+    <h3>Employe Name</h3>
+    <ol class="names">
+        <li>prince</li>
+        <li>raj</li>
+        <li>rahul</li>
+        <li>kashi</li>
+        <li>kamal</li>
+    </ol>
+    <h3>Language Name</h3>
+    <ul class="langName">
+        <li>java</li>
+        <li>javascripts</li>
+        <li>python</li>
+        <li>cpp</li>
+    </ul>
+</body>
+<script>
+    //lets remove the first name of employee
+    const firstName = document.querySelector('li:first-child')
+    firstName.remove() //it remove prince from list 
+
+    //lets remove the java from language name 
+    const langName = document.querySelector('.langName')
+    langName.children[0].remove()
+
+    //lets delete the last name from employee name
+    const lastName = document.querySelector('li:last-child')
+    lastName.remove()//kamal  deleted from employee name
+    
+</script>
+</html>
