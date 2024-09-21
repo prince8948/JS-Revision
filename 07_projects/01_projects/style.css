@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+ margin: 15rem auto;
+ text-align: center;
+ align-items: center;
+}
+.button{
+    width: 100px;
+    height: 50px;
+}
+#grey{
+    background-color: grey;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+.resetcolor{
+    padding: 6px 10px;
+    font-weight: bold;
+}
