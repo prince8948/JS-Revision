@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        body {
+            /* width: 100%; */
+            background-color: #212121;
+            color: #fff;
+            text-align: center;
+            align-items: center;
+        }
+        h1{
+            width: 100%;
+            margin-top: 200px;
+        }
+
+        #clock {
+            width: 200px;
+            background-color: rgb(216, 235, 177);
+            color: #000;
+            margin: 0px auto;
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .wrapper{
+            width: 200px;
+            background-color: rgb(120, 247, 125);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin: 0px auto;
+        }
+        .wrapper #hour{
+            margin: 10px;
+            color: #090909;
+            background-color: yellow;
+            padding: 8px 12px;
+        }
+        .wrapper #second{
+            margin: 10px;
+            color: #090909;
+            background-color: yellow;
+            padding: 8px 12px;
+        }
+        .wrapper #minute{
+            margin: 10px;
+            color: #090909;
+            background-color: yellow;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital Watch</h2>
+        <div id="clock">
+        </div>
+        <div class="wrapper">
+            <h2 id="hour"></h2>
+            <h2 id="minute" ></h2>
+            <h2 id="second" ></h2>
+        </div>
+
+</body>
+<script src="scripts.js"></script>
+
+</html>
