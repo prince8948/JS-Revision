@@ -12,9 +12,11 @@ function addList(text){
     newList.textContent =   `${text}`
     const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove'; // Label the button "Remove"
-
+        // removeBtn.setAttribute('className', 'removebtn')
+        removeBtn.style.color = 'red'
         const donebtn = document.createElement('button');
         donebtn.textContent = 'Done';
+
         // Add click event listener to the "Remove" button
         removeBtn.addEventListener('click', function() {
             newList.remove(); // Remove the list item when the button is clicked
