@@ -144,21 +144,60 @@ const stopIn =setInterval(changeContinuos, 1000, "Prince")
  */
 
 
- // lets halndle with wab page 
+// lets halndle with wab page 
 
-document.addEventListener('DOMContentLoaded',function(){ // this line load DOM before script code run
-    
- const repeatText = ()=>{
-    const txt =  document.querySelector('h1').innerHTML = "Learning Set Interval"
-     console.log(txt)
-  }
-  const stopIt = setInterval(repeatText, 1000);
- 
- document.querySelector('#stop').addEventListener('click',function(){
-     clearInterval(stopIt);
-     console.log('Stopped....');
- });
- document.querySelector('#start').addEventListener('click', ()=>{
-    setInterval(repeatText, 1000)
- });
+// document.addEventListener('DOMContentLoaded',function(){ // this line load DOM before script code run
+
+//  const repeatText = ()=>{
+//     const txt =  document.querySelector('h1').innerHTML = "Learning Set Interval"
+//      console.log(txt)
+//   }
+//   const stopIt = setInterval(repeatText, 1000);
+
+//  document.querySelector('#stop').addEventListener('click',function(){
+//      clearInterval(stopIt);
+//      console.log('Stopped....');
+//  });
+//  document.querySelector('#start').addEventListener('click', ()=>{
+//     setInterval(repeatText, 1000)
+//  });
+// })
+
+
+// above code have a little issue when we click on stop and start again then 
+// when we want to stop it stop one time and start again without clicking start button
+// lets Resolve this problems
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let intervalValue = null;
+
+    const repeatTxt = () => {
+        const text = document.querySelector('h1').innerHTML = 'Learning Js Continuosly';
+        console.log(text);
+        
+    }
+//this  function start the interval continue if interval value is 0;    
+    function startInterval() {
+        if (intervalValue === null) {
+            intervalValue = setInterval(repeatTxt, 1000)
+            console.log('Started.....');
+        }
+    }
+// this function stop the interval and reassign the interval 0 so start again     
+    function stopInterval() {
+        if (intervalValue !== null) {
+            clearInterval(intervalValue)
+            intervalValue = null;  // reset the value after stopping
+            console.log("stopped.....");   
+        }
+    }
+
+    document.querySelector('#start').addEventListener('click', startInterval);
+
+    document.querySelector('#stop').addEventListener('click', stopInterval)
 })
+
+
+
+
