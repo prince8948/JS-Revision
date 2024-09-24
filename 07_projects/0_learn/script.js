@@ -114,3 +114,51 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // setInterval() in JavaScript is used to repeatedly execute a function or a 
 // block of code at specified intervals (in milliseconds)
+// syntax -->  setInterval(function, interval, param1, param2, ...);
+
+/*setInterval(()=>{
+    console.log("lern setInterval")
+},1000)
+
+//Other way 
+function Interval(){
+    console.log('using function refernce');
+} 
+setInterval(Interval, 2000)
+
+//otherway set intervals 
+const repeatText= ()=>{
+    console.log("using arrow functions");
+}
+setInterval(repeatText, 3000);
+
+// let do this passing the valuw in functions
+const changeContinuos = (text)=>{
+    console.log(`Say Good Morning Every Minuts  ${text}`)
+}
+const stopIn =setInterval(changeContinuos, 1000, "Prince")
+
+// how to stop the interval 
+// assing setInterval in variable and pass inside the clearInterval
+ clearInterval(stopIn);
+ */
+
+
+ // lets halndle with wab page 
+
+document.addEventListener('DOMContentLoaded',function(){ // this line load DOM before script code run
+    
+ const repeatText = ()=>{
+    const txt =  document.querySelector('h1').innerHTML = "Learning Set Interval"
+     console.log(txt)
+  }
+  const stopIt = setInterval(repeatText, 1000);
+ 
+ document.querySelector('#stop').addEventListener('click',function(){
+     clearInterval(stopIt);
+     console.log('Stopped....');
+ });
+ document.querySelector('#start').addEventListener('click', ()=>{
+    setInterval(repeatText, 1000)
+ });
+})
