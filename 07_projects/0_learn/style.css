@@ -1,0 +1,15 @@
+/* css for images  */
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-auto-rows: 10px; /* Create grid rows with automatic sizing */
+      gap: 10px;
+}
+
+img{
+    width: 300px;
+}
