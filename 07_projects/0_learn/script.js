@@ -146,22 +146,22 @@ const stopIn =setInterval(changeContinuos, 1000, "Prince")
 
 // lets halndle with wab page 
 
-// document.addEventListener('DOMContentLoaded',function(){ // this line load DOM before script code run
+document.addEventListener('DOMContentLoaded',function(){ // this line load DOM before script code run
 
-//  const repeatText = ()=>{
-//     const txt =  document.querySelector('h1').innerHTML = "Learning Set Interval"
-//      console.log(txt)
-//   }
-//   const stopIt = setInterval(repeatText, 1000);
+ const repeatText = ()=>{
+    const txt =  document.querySelector('h1').innerHTML = "Learning Set Interval"
+     console.log(txt)
+  }
+  const stopIt = setInterval(repeatText, 1000);
 
-//  document.querySelector('#stop').addEventListener('click',function(){
-//      clearInterval(stopIt);
-//      console.log('Stopped....');
-//  });
-//  document.querySelector('#start').addEventListener('click', ()=>{
-//     setInterval(repeatText, 1000)
-//  });
-// })
+ document.querySelector('#stop').addEventListener('click',function(){
+     clearInterval(stopIt);
+     console.log('Stopped....');
+ });
+ document.querySelector('#start').addEventListener('click', ()=>{
+    setInterval(repeatText, 1000)
+ });
+})
 
 
 // above code have a little issue when we click on stop and start again then 
