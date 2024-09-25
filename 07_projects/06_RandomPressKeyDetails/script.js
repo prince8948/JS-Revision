@@ -1,5 +1,5 @@
 window.addEventListener('keydown', function (e) {
-    document.querySelector('body').innerHTML = `<div class="container"> 
+    document.querySelector('.keysCode').innerHTML = `<div class="container"> 
         <table>
   <tr>
     <th>key</th>
@@ -14,3 +14,13 @@ window.addEventListener('keydown', function (e) {
 </table>
     </div>`;
 })
+
+
+
+
+
+
+
+
+
+
