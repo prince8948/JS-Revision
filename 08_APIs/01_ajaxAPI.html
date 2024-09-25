@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to handle API value with Ajax</title>
+    <style>
+        img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Get Data from API using ajax</h1>
+    <img src="" alt="error" class="image">
+    <p id="followers"></p>
+
+    <p>
+        0	: UNSENT	Client has been created. open() not called yet.<br>
+        1	: OPENED	open() has been called.<br>
+        2	: HEADERS_RECEIVED	send() has been called, and headers and status are available.<br>
+        3	: LOADING	Downloading; responseText holds partial data.<br>
+        4	: DONE	The operation is complete.
+    </p>
+</body>
+<script>
+    // const requestUrl = 'https://api.github.com/users/prince8948';
+    // //its create your http request
+    // const XHR = new XMLHttpRequest();
+    // //this is used to make HTTP requests in JavaScript.
+    // XHR.open('GET', requestUrl);
+    // // if want to states 
+    // XHR.onreadystatechange = function(){
+    //     console.log(XHR.readyState);
+    //     if(XHR.readyState === 4){
+    //         const data = JSON.parse(this.responseText);
+    //         console.log(typeof data);
+    //         console.log(data.followers);
+    //         console.log(data.avatar_url);
+            
+    //         document.querySelector('.image').src = data.avatar_url;
+    //         document.querySelector('#followers').innerHTML = data.followers;
+    //     }
+    // }
+    // XHR.send();
+
+
+
+    const requesturl = 'https://api.github.com/users/prince8948';
+    //lets create request 
+    const xhrRequest = new XMLHttpRequest();
+    //which is used to make HTTP requests in JavaScript
+    xhrRequest.open('GET', requesturl);
+    xhrRequest.onreadystatechange = function(){
+        // The property can have five possible values, ranging from 0 (unsent) to 4 (done), and readyState === 3 refers to the third state.
+        // console.log(xhrRequest.readyState);
+        if(xhrRequest.readyState === 3){
+            const getData = JSON.parse(this.responseText);
+            // console.log(getData);
+            //below code show the result on webpages
+            document.querySelector('.image').src = getData.avatar_url;
+            document.querySelector('#followers').innerHTML = `${getData.followers} & ${getData.location}, ${getData.repos_url}`
+        }
+    }
+    xhrRequest.send();
+    // console.log(xhrRequest);
+    
+</script>
+</html>
