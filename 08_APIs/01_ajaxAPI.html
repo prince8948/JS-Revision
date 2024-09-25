@@ -14,7 +14,7 @@
     <h1>Get Data from API using ajax</h1>
     <img src="" alt="error" class="image">
     <p id="followers"></p>
-
+    <button><a href="">go to github repo</a></button>
     <p>
         0	: UNSENT	Client has been created. open() not called yet.<br>
         1	: OPENED	open() has been called.<br>
@@ -55,11 +55,15 @@
         // The property can have five possible values, ranging from 0 (unsent) to 4 (done), and readyState === 3 refers to the third state.
         // console.log(xhrRequest.readyState);
         if(xhrRequest.readyState === 3){
+            //here we convert the data in object using json.parse
             const getData = JSON.parse(this.responseText);
             // console.log(getData);
             //below code show the result on webpages
             document.querySelector('.image').src = getData.avatar_url;
-            document.querySelector('#followers').innerHTML = `${getData.followers} & ${getData.location}, ${getData.repos_url}`
+            document.querySelector('#followers').innerHTML = `${getData.followers} & ${getData.location}`
+            getData.twitter_username = '@PrinceKumar894'
+            console.log(getData.twitter_username)
+            document.querySelector('a').href = getData.repos_url
         }
     }
     xhrRequest.send();
