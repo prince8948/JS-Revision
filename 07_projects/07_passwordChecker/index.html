@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password checking</title>
+    <style>
+        body{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        form, label{
+            margin: 10px;
+        }
+        p{
+            margin: 10px auto;
+        }
+        #check, #reset{
+            width: 100px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for=""> Enter Your Password :
+            <input type="password" id="password" class="userpass">
+        </label>
+        <label for=""> Re-Enter Your Password : 
+            <input type="password" name="Repassword" id="repassword"><br>
+        </label>
+        <p><input type="checkbox" id="viewpassword">show password</p>
+        <input type="submit" value="submit" id="check">
+        <input type="reset" value="reset" id="reset">
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,8 +1,7 @@
 function check(){
-    console.log("Param Required")
+    console.log("Param Required");
 }
-
 function show(name = check()){
-    console.log(name)
+    console.log(name);
 }
-show()
+show();
