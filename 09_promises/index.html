@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Pad</title>
+  <style>
+    #signatureCanvas {
+      border: 2px solid black;
+      width: 100%;
+      height: 300px;
+      touch-action: none; /* Prevent scrolling on mobile while signing */
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Signature Pad</h2>
+<canvas id="signatureCanvas"></canvas>
+<div class="buttons">
+  <button id="clearButton">Clear Signature</button>
+</div>
+
+<script>
+  // Get references to the canvas and its context
+  const canvas = document.getElementById('signatureCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set canvas size (optional: to make it responsive)
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+
+  let isDrawing = false; // Track if the mouse is pressed
+  let lastX = 0; // Last X coordinate
+  let lastY = 0; // Last Y coordinate
+
+  // Function to start drawing
+  function startDrawing(event) {
+    isDrawing = true;
+    [lastX, lastY] = [event.offsetX, event.offsetY]; // Set initial position
+  }
+
+  // Function to stop drawing
+  function stopDrawing() {
+    isDrawing = false;
+  }
+
+  // Function to draw on the canvas
+  function draw(event) {
+    if (!isDrawing) return; // Exit if the mouse isn't pressed
+
+    // Begin drawing
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY); // Start from the last position
+    ctx.lineTo(event.offsetX, event.offsetY); // Draw a line to the current position
+    ctx.strokeStyle = 'black'; // Set the line color
+    ctx.lineWidth = 2; // Set the line width
+    ctx.stroke();
+
+    [lastX, lastY] = [event.offsetX, event.offsetY]; // Update last position
+  }
+
+  // Clear the canvas
+  function clearSignature() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  // Event listeners for mouse interactions
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseout', stopDrawing); // Stop drawing if the mouse leaves the canvas
+
+  // Clear button event listener
+  document.getElementById('clearButton').addEventListener('click', clearSignature);
+</script>
+
+</body>
+</html>
