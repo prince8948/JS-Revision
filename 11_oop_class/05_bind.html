@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW TO USED BIND</title>
+</head>
+<body>
+    <h1>how the bind is work in javascripts</h1>
+    <button>Click me</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.port = 3000
+            this.server = 'https://localhost:3000'
+            document.querySelector('button').addEventListener('click', this.handleClick.bind());
+        }
+
+
+        handleClick(){
+            console.log('Button clicked...')
+            console.log(this)
+        }
+    }
+
+</script>
+</html>
