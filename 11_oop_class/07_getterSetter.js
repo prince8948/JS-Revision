@@ -32,7 +32,6 @@ const user1 = new User('prince', 'prince@p.com')
 
 
 //now create getter setter using function and defineproperty()
-
 function userDetails(userName, userCity){
     this._userName = userName
     this._userCity = userCity
