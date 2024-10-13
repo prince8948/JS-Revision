@@ -61,7 +61,7 @@ const arr=[20, 10, 23, 45, 65, 42]
 
 
 
-//splice(start, end)    ->in slice end range is included but it change the original array 
+//splice(start, end)    ->in splice end range is included but it change the original array 
 //console.log("Before Splice ->  ",arr);
 const newSpliceArray = arr.splice(1,3);
 //console.log("Splice result -> ",newSpliceArray)

@@ -16,7 +16,7 @@ const hundreds = 1000000
 // [Number: 100]
 let points = 12.21
 
-// console.log(points.toPrecision(4)) //how many numbers you want to show wuth dots
+// console.log(points.toPrecision(4)) //how many numbers you want to show with dots
 
 // build in methods on number -> min, max, abs, random(imp), flore, ceil,toFixed, round, toPrecision etc
 const nums = 120.99;
@@ -42,7 +42,6 @@ console.log(Math.floor(Math.random()*10)) // it always print the any interger
 console.log(Math.floor(Math.random()*100000) + 900000);
 
 // how to set random number range 
-
 let minNum = 100000;
 let maxNum = 900000;
 

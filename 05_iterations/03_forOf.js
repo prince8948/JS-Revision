@@ -11,7 +11,6 @@ for (const val of fruits) {
 }
 
 // how to used forof loops with map
-
 const map = new Map();
 map.set(1, 'India');
 map.set(2,'USA')
