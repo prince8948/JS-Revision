@@ -9,5 +9,4 @@ function outer(){
         console.log(userDetailes)
     }inner()
     console.log(userDetailes);
-    
 }outer()
