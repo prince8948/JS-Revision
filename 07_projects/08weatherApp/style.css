@@ -5,10 +5,11 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    margin-top: 20%;
+    align-items: center;
 }
 .card{
-    width: 40%;
+    margin-top: 100px;
+    width: 350px;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -16,24 +17,29 @@ body{
     justify-content: center;
     align-items: center;
     padding: 40px 10px;
-    background: linear-gradient(270deg, rgba(111,155,190,1) 0%, rgba(7,229,239,1) 70%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(120deg, #28666E 70%, #7C9885 100%);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: relative;
 }
 .search{
     display: flex;
     flex-direction: row;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
 }
 .input{
     padding: 8px 10px;
     border-radius: 10px 0px 0px 10px ;
     border: none;
     font-size: 18px;
+    outline: none;
+    background: #dcdedd;
 }
 .btn{
     padding: 4px 10px;
     border: none;
-    background-color: rgba(0,212,255,1);
+    background-color: #7C9885;
     border-radius: 0px 10px 10px 0px;
     cursor: pointer;
 }
@@ -86,14 +92,14 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.footer .humidity .h-icon img{
-    
-}
 .footer .humidity .h-details .h-per, .name{
     margin: 0px;
     padding: 0px;
     color: #d7eaf1;
-
+    font-weight: 600;
+}
+.footer .humidity .h-details, .name{
+    font-size: 14px;
 }
 
 .footer .wind{
@@ -105,5 +111,11 @@ body{
 .footer .wind .wind-details .w-per, .w-unit{
     margin: 0px;
     padding: 0px;
+    color: #d7eaf1;
+    font-weight: 600;
+}
+.w-unit{
+    font-size: 14px;
+    font-weight: 500;
 }
 
